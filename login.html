@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>SimpleLife登录或注册</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    <div class="header_menu">
+        <!--logo-->
+        <div class="menu_logo">
+            <h1>
+                <a href="login.php" title="前往首页">
+                    <span>SimpleLife</span>
+                </a>
+            </h1>
+        </div>
+        <!--登录框-->
+        <div class="menu_login">
+            <form id="form_login" action="login.php" method="post">
+                <label for="user_email">邮箱：</label>
+                <input type="text" id="user_email" name="user_email">
+                <label for="user_password">密码：</label>
+                <input type="password" id="user_password" name="user_password">
+                <input type="submit" id="login" value="登录">
+            </form>
+            <div class="lost_password">
+                <a href="">忘记密码？</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--主体-->
+<div class="content">
+    <div class="content_container">
+        <div class="left_content">
+            <div class="slogan">
+                <h3>发现生活,分享生活</h3>
+                <img src="img/main.png" alt="">
+            </div>
+        </div>
+        <div class="right_content">
+            <div class="register_title">
+                <p>马上注册</p>
+            </div>
+            <div class="register">
+                <form action="" id="register_form" method="post">
+                    <div>
+                        <div class="form_info">
+                            <input type="text" id="set_name" required="required" class="register_form_field validate" placeholder="输入用户名">
+                            <label for="set_name" class="register_form_label">用户名<span>*</span>：</label>
+                        </div>
+                        <div class="validate_info">
+                            <i></i><span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_info">
+                            <input type="text" id="set_email" required="required" class="register_form_field validate" placeholder="输入邮箱">
+                            <label for="set_email" class="register_form_label">邮箱<span>*</span>：</label>
+                        </div>
+                        <div class="validate_info">
+                            <i></i><span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_info">
+                            <input type="password" id="set_password" required="required" class="register_form_field validate" placeholder="输入密码">
+                            <label for="set_password" class="register_form_label">密码<span>*</span>：</label>
+                        </div>
+                        <div class="validate_info">
+                            <i></i><span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_info">
+                            <input type="password" id="confirm_password" required="required" class="register_form_field validate" placeholder="再次输入密码">
+                            <label for="confirm_password" class="register_form_label">重复密码<span>*</span>：</label>
+                        </div>
+                        <div class="validate_info">
+                            <i></i><span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_info">
+                            <span class="register_form_field">
+                                <select name="year" id="year">
+                                    <option value="0" selected="selected">年</option>
+                                    <option value="2017">2017年</option>
+                                    <option value="2016">2016年</option>
+                                    <option value="2015">2015年</option>
+                                    <option value="2014">2014年</option>
+                                    <option value="2013">2013年</option>
+                                    <option value="2012">2012年</option>
+                                    <option value="2011">2011年</option>
+                                    <option value="2010">2010年</option>
+                                    <option value="2009">2009年</option>
+                                    <option value="2008">2008年</option>
+                                    <option value="2007">2007年</option>
+                                    <option value="2006">2006年</option>
+                                    <option value="2005">2005年</option>
+                                    <option value="2004">2004年</option>
+                                    <option value="2003">2003年</option>
+                                    <option value="2002">2002年</option>
+                                    <option value="2001">2001年</option>
+                                    <option value="2000">2000年</option>
+                                    <option value="1999">1999年</option>
+                                    <option value="1998">1998年</option>
+                                    <option value="1997">1997年</option>
+                                    <option value="1996">1996年</option>
+                                    <option value="1995">1995年</option>
+                                    <option value="1994">1994年</option>
+                                    <option value="1993">1993年</option>
+                                    <option value="1992">1992年</option>
+                                    <option value="1991">1991年</option>
+                                    <option value="1990">1990年</option>
+                                    <option value="1989">1989年</option>
+                                    <option value="1988">1988年</option>
+                                    <option value="1987">1987年</option>
+                                    <option value="1986">1986年</option>
+                                    <option value="1985">1985年</option>
+                                    <option value="1984">1984年</option>
+                                    <option value="1983">1983年</option>
+                                    <option value="1982">1982年</option>
+                                    <option value="1981">1981年</option>
+                                    <option value="1980">1980年</option>
+                                    <option value="1979">1979年</option>
+                                    <option value="1978">1978年</option>
+                                    <option value="1977">1977年</option>
+                                    <option value="1976">1976年</option>
+                                    <option value="1975">1975年</option>
+                                    <option value="1974">1974年</option>
+                                    <option value="1973">1973年</option>
+                                    <option value="1972">1972年</option>
+                                    <option value="1971">1971年</option>
+                                    <option value="1970">1970年</option>
+                                    <option value="1969">1969年</option>
+                                    <option value="1968">1968年</option>
+                                    <option value="1967">1967年</option>
+                                    <option value="1966">1966年</option>
+                                    <option value="1965">1965年</option>
+                                    <option value="1964">1964年</option>
+                                    <option value="1963">1963年</option>
+                                    <option value="1962">1962年</option>
+                                    <option value="1961">1961年</option>
+                                    <option value="1960">1960年</option>
+                                    <option value="1959">1959年</option>
+                                    <option value="1958">1958年</option>
+                                    <option value="1957">1957年</option>
+                                    <option value="1956">1956年</option>
+                                    <option value="1955">1955年</option>
+                                    <option value="1954">1954年</option>
+                                    <option value="1953">1953年</option>
+                                    <option value="1952">1952年</option>
+                                    <option value="1951">1951年</option>
+                                    <option value="1950">1950年</option>
+                                    <option value="1949">1949年</option>
+                                    <option value="1948">1948年</option>
+                                    <option value="1947">1947年</option>
+                                    <option value="1946">1946年</option>
+                                    <option value="1945">1945年</option>
+                                    <option value="1944">1944年</option>
+                                    <option value="1943">1943年</option>
+                                    <option value="1942">1942年</option>
+                                    <option value="1941">1941年</option>
+                                    <option value="1940">1940年</option>
+                                    <option value="1939">1939年</option>
+                                    <option value="1938">1938年</option>
+                                    <option value="1937">1937年</option>
+                                    <option value="1936">1936年</option>
+                                    <option value="1935">1935年</option>
+                                    <option value="1934">1934年</option>
+                                    <option value="1933">1933年</option>
+                                    <option value="1932">1932年</option>
+                                    <option value="1931">1931年</option>
+                                    <option value="1930">1930年</option>
+                                    <option value="1929">1929年</option>
+                                    <option value="1928">1928年</option>
+                                    <option value="1927">1927年</option>
+                                    <option value="1926">1926年</option>
+                                    <option value="1925">1925年</option>
+                                    <option value="1924">1924年</option>
+                                    <option value="1923">1923年</option>
+                                    <option value="1922">1922年</option>
+                                    <option value="1921">1921年</option>
+                                    <option value="1920">1920年</option>
+                                    <option value="1919">1919年</option>
+                                    <option value="1918">1918年</option>
+                                    <option value="1917">1917年</option>
+                                    <option value="1916">1916年</option>
+                                    <option value="1915">1915年</option>
+                                    <option value="1914">1914年</option>
+                                    <option value="1913">1913年</option>
+                                    <option value="1912">1912年</option>
+                                    <option value="1911">1911年</option>
+                                    <option value="1910">1910年</option>
+                                    <option value="1909">1909年</option>
+                                    <option value="1908">1908年</option>
+                                    <option value="1907">1907年</option>
+                                    <option value="1906">1906年</option>
+                                    <option value="1905">1905年</option>
+                                </select>
+                                <select name="month" id="month">
+                                    <option value="0"  selected="selected">月</option>
+                                    <option value="01">1月</option>
+                                    <option value="02">2月</option>
+                                    <option value="03">3月</option>
+                                    <option value="04">4月</option>
+                                    <option value="05">5月</option>
+                                    <option value="06">6月</option>
+                                    <option value="07">7月</option>
+                                    <option value="08">8月</option>
+                                    <option value="09">9月</option>
+                                    <option value="10">10月</option>
+                                    <option value="11">11月</option>
+                                    <option value="12">12月</option>
+                                </select>
+                                <select name="day" id="day">
+                                    <option value="0" selected="selected">日</option>
+                                    <option value="01">1日</option>
+                                    <option value="02">2日</option>
+                                    <option value="03">3日</option>
+                                    <option value="04">4日</option>
+                                    <option value="05">5日</option>
+                                    <option value="06">6日</option>
+                                    <option value="07">7日</option>
+                                    <option value="08">8日</option>
+                                    <option value="09">9日</option>
+                                    <option value="10">10日</option>
+                                    <option value="11">11日</option>
+                                    <option value="12">12日</option>
+                                    <option value="13">13日</option>
+                                    <option value="14">14日</option>
+                                    <option value="15">15日</option>
+                                    <option value="16">16日</option>
+                                    <option value="17">17日</option>
+                                    <option value="18">18日</option>
+                                    <option value="19">19日</option>
+                                    <option value="20">20日</option>
+                                    <option value="21">21日</option>
+                                    <option value="22">22日</option>
+                                    <option value="23">23日</option>
+                                    <option value="24">24日</option>
+                                    <option value="25">25日</option>
+                                    <option value="26">26日</option>
+                                    <option value="27">27日</option>
+                                    <option value="28">28日</option>
+                                    <option value="29">29日</option>
+                                    <option value="30">30日</option>
+                                    <option value="31">31日</option>
+                                </select>
+                            </span>
+                            <span class="register_form_label">生日：</span>
+                        </div>
+                        <div class="validate_info">
+                            <i></i><span></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form_info">
+                            <span class="register_form_field">
+                                <label for="male" class="form_radio">
+                                    <input type="radio" id="male" checked="checked"  name="gender" value="男">男
+                                </label>
+                                <label for="female" class="form_radio">
+                                    <input type="radio" id="female" name="gender" value="女">女
+                                </label>
+                            </span>
+                            <span class="register_form_label">性别：</span>
+                        </div>
+                    </div>
+                    <div class="license">
+                        <p>点击创建账户，即代表你同意我们的<a href="">条款</a>，并已阅读了我们的<a href="">数据使用政策</a>。</p>
+                    </div>
+                    <div>
+                        <input type="submit" id="create_user" value="创建账户">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="tips">
+    <img src="" alt="">
+    <span>注册成功!</span>
+</div>
+<div id="instruction">
+    <h5>使用说明</h5>
+    <dl>
+        <dt>简介</dt>
+        <dd>这是一个简易的微博系统</dd>
+        <dd>可以进行微博的发布、评论、回复、收藏和点赞</dd>
+        <dd>也可以设置个人信息（包括头像封面）以及添加关注</dd>
+        <dd>部分功能尚未实现（分享、重编辑等）</dd>
+        <dt>登录</dt>
+        <dd>自行注册账号（格式正确即可）</dd>
+        <dd>使用预设账号体验（00001@163.com / 111111）</dd>
+    </dl>
+
+</div>
+<!--页脚-->
+<div class="footer">
+    <div class="footer_container">
+        <ul class="footer_list">
+            <li><a href="">隐私权政策</a></li>
+            <li><a href="">招聘信息</a></li>
+            <li><a href="">帮助中心</a></li>
+            <li><a href="">关于</a></li>
+        </ul>
+        <div>
+            <span>SimpleLife &copy; 2017</span>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

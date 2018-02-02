@@ -1,0 +1,576 @@
+body{
+    position: relative;
+}
+.header{
+    box-sizing: border-box;
+    height: 52px;
+    width:100%;
+    background-color: rgba(25, 110, 76, 0.9);
+    position: fixed;
+    z-index: 666;
+}
+.header_container{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+.header_container .logo{
+    float: left;
+    width: 80px;
+    line-height: 36px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.header_container .logo a{
+    color: #ffffff;
+}
+.header_container .search_box{
+    float: left;
+    width: 310px;
+
+}
+#search_form{
+    position: relative;
+}
+#search{
+    box-sizing: border-box;
+    height: 36px;
+    width: 300px;
+    border: 1px solid #407560;
+    border-right: none;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px #b8b8b8 inset;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-indent: 5px;
+}
+#search_start{
+    box-sizing: border-box;
+    height: 36px;
+    width: 80px;
+    border: 1px solid #407560;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #f6f7f9;
+    position: absolute;
+}
+#search_start:hover{
+    background: #f0f1f3;
+    fill: #43876d;
+}
+
+
+.header_container .nav{
+    float: right;
+    width: 450px;
+    height: 36px;
+}
+.header_container .nav .navbar{
+    float: left;
+}
+.header_container .nav .navbar li{
+    box-sizing: border-box;
+    height: 36px;
+    list-style: none;
+    display: inline-block;
+    font-weight: bold;
+    padding: 6px 5px 0 5px;
+    border-radius: 5px;
+}
+.header_container .nav .navbar li svg{
+    height: 24px;
+    width: 24px;
+    fill:#355b4a;
+}
+.header_container .nav .navbar ul li:hover{
+    background-color: #3e7761;
+}
+.header_container .nav .navbar li i{
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle;
+}
+.header_container .nav .navbar li span{
+    color: white;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.header_container .nav .shortcut{
+    position: relative;
+    float: right;
+}
+.header_container .nav .shortcut:after{
+    clear: both;
+}
+.header_container .nav .shortcut>span{
+    display: inline-block;
+    height: 36px;
+    padding: 6px 5px 0 5px;
+    position: relative;
+    cursor: pointer;
+}
+.header_container .nav .shortcut span svg{
+    width: 24px;
+    height: 24px;
+    fill: #355b4a;
+    transition: fill 0.3s;
+}
+.header_container .nav .shortcut span svg:hover{
+    fill: #ffffff;
+}
+.header_container .nav .shortcut span em{
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #6e6e6e;
+    border-radius: 50%;
+    background-color: #df0000;
+    top: 0;
+    right: 5px;
+}
+.shortcut>div{
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 0 10px;
+    border: 1px solid #c0c2c5;
+    box-shadow: 0 2px 5px #c0c2c5;
+    background-color: #ffffff;
+    display: none;
+}
+.shortcut>div i{
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    top: -10px;
+}
+#chat_list{
+    width: 350px;
+    height: 500px;
+    left: -240px;
+}
+#chat_list .chat_list_header{
+    border-bottom: 1px solid #e9ebee;
+    height: 30px;
+}
+#chat_list .chat_list_content{
+    height: 436px;
+    overflow: auto;
+}
+#chat_list .chat_list_footer{
+    border-top: 1px solid #e9ebee;
+    height: 30px;
+}
+#chat_list .chat_list_header span,#chat_list .chat_list_footer span{
+    height: 30px;
+    line-height: 30px;
+    color: #365899;
+}
+#chat_list .chat_list_header span:hover,#chat_list .chat_list_footer span:hover{
+    cursor: pointer;
+}
+#to_chat_all{
+    float: left;
+}
+#mark_read{
+    float: right;
+}
+#chat_list i{
+    right: 80px;
+}
+#message_list{
+    width: 350px;
+    height: 450px;
+    left: -240px;
+}
+#message_list .message_list_header{
+    border-bottom: 1px solid #e9ebee;
+    height: 30px;
+}
+#message_list .message_list_header{
+    height: 30px;
+    line-height: 30px;
+    color: #365899;
+}
+#message_list .message_list_content{
+    height: 419px;
+    overflow: auto;
+}
+#message_list i{
+    right: 40px;
+}
+#more_list{
+    width: 100px;
+    padding: 5px 5px;
+    left: 10px;
+}
+#more_list ul li{
+    cursor: pointer;
+    list-style: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+#more_list ul li:hover{
+    background-color: #e0e2e5;
+}
+#more_list i{
+    right: 5px;
+}
+
+/*主体内容样式*/
+.main{
+    padding-top: 52px;
+}
+.main_container{
+    width: 1000px;
+    padding-top: 15px;
+    margin: 0 auto;
+}
+.main .content_main{
+    width: 830px;
+    float: left;
+}
+/*筛选区*/
+.main .content_main .filter{
+    width: 170px;
+    float: left;
+    padding-top: 10px;
+    position: fixed;
+}
+.filter_list li{
+    list-style: none;
+    padding: 5px 0;
+    text-indent: 10px;
+    font-weight: bold;
+}
+.filter_list li.filter_item{
+    cursor: pointer;
+}
+.filter_list li.filter_item:hover{
+    background-color: #f3f5f8;
+}
+
+
+
+/*内容视图*/
+.main .content_main .content_view{
+    width: 660px;
+    float: right;
+}
+
+/*主体内容标签栏*/
+.content_tab{
+    box-sizing: border-box;
+    height: 50px;
+    border: 1px solid #c0c2c5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #c0c2c5;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.content_tab div{
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 30px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+.content_tab div i{
+    border:13px solid transparent;
+    border-top: none;
+    border-bottom: 13px solid #e9ebee;
+    position: absolute;
+    bottom: -13px;
+    left: 40px;
+    display: none;
+}
+.content_tab div.active{
+    font-weight: bold;
+    color: #2e7a5c;
+}
+.content_tab div.active i{
+    display: block;
+}
+
+/*关注用户条目*/
+.follow_list{
+    position: relative;
+}
+.follow_list .follow_list_item{
+    box-sizing: border-box;
+    height: 110px;
+    width: 330px;
+    padding: 5px;
+    list-style: none;
+    display: inline-block;
+}
+.follow_list_item>div{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px;
+    height: 100px;
+    width: 320px;
+    border: 1px solid #c0c2c5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #c0c2c5;
+    background: #ffffff;
+}
+.follow_list_item>div:hover{
+    box-shadow: 0 0 8px #c0c2c5;
+}
+
+.content_view .user_icon{
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+    float: left;
+}
+.content_view .user_icon img{
+    height: 88px;
+    width: 88px;
+}
+.content_view .user_detail{
+    height: 88px;
+    width: 210px;
+    float: right;
+}
+.content_view .user_info{
+    height: 52px;
+}
+.content_view .user_info>div{
+    float: left;
+    line-height: 26px;
+}
+.content_view .user_info button{
+    float: right;
+    border:none;
+    border-radius: 3px;
+    height: 23px;
+    width: 60px;
+    margin: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+button.cancel_follow{
+    background-color: #56927b;
+}
+.follow_list_item .user_info button:hover{
+    background-color: #890b04;
+}
+
+.content_view .user_total{
+    height: 36px;
+}
+.content_view .user_total ul li{
+    list-style: none;
+    display: inline-block;
+    height: 36px;
+    width: 65px;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+/*粉丝用户条目*/
+.fans_list{
+    display: none;
+}
+.fans_list .fans_list_item{
+    box-sizing: border-box;
+    height: 110px;
+    width: 330px;
+    padding: 5px;
+    list-style: none;
+    display: inline-block;
+}
+.fans_list_item>div{
+    box-sizing: border-box;
+    padding: 5px;
+    height: 100px;
+    width: 320px;
+    border: 1px solid #c0c2c5;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #c0c2c5;
+    background: #ffffff;
+}
+.fans_list_item>div:hover{
+    box-shadow: 0 0 8px #c0c2c5;
+}
+.fans_list_item .user_info button:hover{
+    background-color: #457d66;
+}
+
+
+/*用户名统一加粗*/
+.user{
+    font-weight: bold;
+}
+
+
+
+.svg_link{
+    height: 16px;
+    width: 16px;
+    fill: #4955be;
+    vertical-align: text-bottom;
+}
+
+
+/*当前搜索加载完全提示信息*/
+.search_bottom{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #999;
+}
+
+/*用户名片*/
+.user_card{
+    width: 300px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 15px #808285;
+    position: absolute;
+    display: none;
+}
+.user_card .card_cover{
+    width: 300px;
+    height: 105px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.card_cover>img{
+    width: 300px;
+    height: 105px;
+}
+.card_cover .card_name{
+    width: 300px;
+    position: absolute;
+    top: 5px;
+    text-align: center;
+}
+.card_name .card_user_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin:0 auto;
+}
+.card_user_img img{
+    width: 70px;
+    height: 70px;
+}
+.card_name .card_user_name a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-shadow:0 0 1px #000000;
+}
+.user_card .card_info{
+
+}
+.card_info ul{
+    height: 25px;
+    padding: 10px 0;
+}
+.card_info ul li{
+    text-align: center;
+    width: 99px;
+    list-style: none;
+    display: inline-block;
+    line-height: 25px;
+    border-right: 1px solid #c0c2c5;
+}
+.card_info ul li a{
+    color: #444;
+    font-weight: bold;
+}
+.card_info ul li:last-child{
+    border: none;
+}
+.card_info .operation_btn{
+    text-align: center;
+    padding: 10px;
+}
+.card_info .operation_btn button{
+    height: 26px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+}
+.card_info .operation_btn button:hover{
+    background-color: #457d66;
+}
+.user_card .arrow_down{
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #ffffff;
+    bottom: -10px;
+    left: 90px;
+}
+.user_card .arrow_up{
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    top: -10px;
+    left: 90px;
+}
+
+
+/*关注按钮统一颜色样式*/
+.follow{
+    background: #56927b;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.follow.followed{
+    background-color: #457d66;
+}
+
+
+
+
+/*页脚*/
+.footer{
+    padding: 10px;
+    line-height: 1.5;
+}
+.footer ul li{
+    list-style: none;
+    display: inline-block;
+}
+.footer ul li a{
+    color: #666;
+}
+.footer ul li a:hover{
+    text-decoration: underline;
+}
+
+/*返回顶部*/
+.to_top{
+    width: 48px;
+    height: 49px;
+    background: url("../img/to_top.png") no-repeat;
+    position: fixed;
+    bottom: 0;
+    margin-left: 900px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.to_top:hover{
+    background: url("../img/to_top.png") -48px 0 no-repeat;
+}

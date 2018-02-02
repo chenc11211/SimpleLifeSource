@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="Description" content="">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home_page.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<svg style="display: none;">
+    <symbol viewBox="0 0 16 16" id="zoom_icon">
+            <path d="M12.7,11.3c0.9-1.2,1.4-2.6,1.4-4.2C14.1,3.2,11,0,7.1,0S0,3.2,0,7.1c0,3.9,3.2,7.1,7.1,7.1 c1.6,0,3.1-0.5,4.2-1.4l3,3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L12.7,11.3z M7.1,12.1 C4.3,12.1,2,9.9,2,7.1S4.3,2,7.1,2s5.1,2.3,5.1,5.1S9.9,12.1,7.1,12.1z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="home_icon">
+                <rect data-color="color-2" x="6" y="6" width="4" height="2"></rect>
+                <path d="M15.651,6.241l-7-6c-0.375-0.322-0.927-0.322-1.302,0L4,3.112V2c0-0.553-0.448-1-1-1S2,1.447,2,2v2.826 L0.349,6.241C-0.07,6.601-0.119,7.231,0.241,7.65c0.359,0.42,0.99,0.468,1.41,0.108L2,7.46V15c0,0.553,0.448,1,1,1h10 c0.552,0,1-0.447,1-1V7.46l0.349,0.299C14.538,7.921,14.769,8,15,8c0.282,0,0.562-0.118,0.76-0.35 C16.119,7.231,16.07,6.601,15.651,6.241z M12,14h-2v-4H6v4H4V5.746l4-3.428l4,3.428V14z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="user_icon">
+            <path d="M8,9L8,9C5.8,9,4,7.2,4,5V4c0-2.2,1.8-4,4-4h0c2.2,0,4,1.8,4,4v1C12,7.2,10.2,9,8,9z"></path>
+            <path data-color="color-2" d="M10,11H6c-2.8,0-5,2.2-5,5v0h14v0C15,13.2,12.8,11,10,11z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="message_icon">
+            <path d="M15.707,0.293c-0.273-0.272-0.68-0.365-1.043-0.234l-14,5C0.287,5.193,0.026,5.54,0.002,5.939 c-0.024,0.4,0.192,0.775,0.551,0.955l4.586,2.292L11,5l-4.187,5.862l2.292,4.586C9.276,15.787,9.623,16,10,16 c0.021,0,0.041-0.001,0.061-0.002c0.4-0.024,0.747-0.284,0.882-0.662l5-14C16.072,0.973,15.98,0.566,15.707,0.293z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="friend_icon">
+            <path d="M8,6L8,6C6.3,6,5,4.7,5,3v0c0-1.7,1.3-3,3-3h0c1.7,0,3,1.3,3,3v0C11,4.7,9.7,6,8,6z"></path>
+            <polygon points="10,16 6,16 6,12 4,10 4,7 12,7 12,10 10,12 "></polygon>
+            <path data-color="color-2" d="M2,5L2,5C0.9,5,0,4.1,0,3v0c0-1.1,0.9-2,2-2h0c1.1,0,2,0.9,2,2v0C4,4.1,3.1,5,2,5z"></path>
+            <polygon data-color="color-2" points="3,10.4 3,6 0,6 0,9 1,10 1,14 4,14 4,11.4 "></polygon>
+            <path data-color="color-2" d="M14,5L14,5c1.1,0,2-0.9,2-2v0c0-1.1-0.9-2-2-2h0c-1.1,0-2,0.9-2,2v0C12,4.1,12.9,5,14,5z"></path>
+            <polygon data-color="color-2" points="13,10.4 13,6 16,6 16,9 15,10 15,14 12,14 12,11.4 "></polygon>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="chat_icon">
+            <path data-color="color-2" d="M15,4h-1v6c0,0.552-0.448,1-1,1H6.828L5,13h5l3,3v-3h2c0.552,0,1-0.448,1-1V5 C16,4.448,15.552,4,15,4z"></path>
+            <path d="M1,0h10c0.552,0,1,0.448,1,1v7c0,0.552-0.448,1-1,1H6l-3,3V9H1C0.448,9,0,8.552,0,8V1C0,0.448,0.448,0,1,0z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="more_icon">
+            <path d="M6,0H1C0.4,0,0,0.4,0,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1V1C7,0.4,6.6,0,6,0z"></path>
+            <path d="M15,0h-5C9.4,0,9,0.4,9,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1V1C16,0.4,15.6,0,15,0z"></path>
+            <path d="M6,9H1c-0.6,0-1,0.4-1,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1v-5C7,9.4,6.6,9,6,9z"></path>
+            <path d="M15,9h-5c-0.6,0-1,0.4-1,1v5c0,0.6,0.4,1,1,1h5c0.6,0,1-0.4,1-1v-5C16,9.4,15.6,9,15,9z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="edit_icon">
+            <path data-color="color-2" d="M14.3,0.3l-8,8c-0.4,0.4-0.4,1,0,1.4C6.5,9.9,6.7,10,7,10s0.5-0.1,0.7-0.3l8-8 c0.4-0.4,0.4-1,0-1.4S14.7-0.1,14.3,0.3z"></path>
+            <path d="M15,7c-0.6,0-1,0.4-1,1c0,3.3-2.7,6-6,6s-6-2.7-6-6s2.7-6,6-6c0.6,0,1-0.4,1-1S8.6,0,8,0C3.6,0,0,3.6,0,8 s3.6,8,8,8s8-3.6,8-8C16,7.4,15.6,7,15,7z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="favorites_icon">
+            <path d="M17.684,7.925l-5.131-0.67L10.329,2.57c-0.131-0.275-0.527-0.275-0.658,0L7.447,7.255l-5.131,0.67C2.014,7.964,1.892,8.333,2.113,8.54l3.76,3.568L4.924,17.21c-0.056,0.297,0.261,0.525,0.533,0.379L10,15.109l4.543,2.479c0.273,0.153,0.587-0.089,0.533-0.379l-0.949-5.103l3.76-3.568C18.108,8.333,17.986,7.964,17.684,7.925 M13.481,11.723c-0.089,0.083-0.129,0.205-0.105,0.324l0.848,4.547l-4.047-2.208c-0.055-0.03-0.116-0.045-0.176-0.045s-0.122,0.015-0.176,0.045l-4.047,2.208l0.847-4.547c0.023-0.119-0.016-0.241-0.105-0.324L3.162,8.54L7.74,7.941c0.124-0.016,0.229-0.093,0.282-0.203L10,3.568l1.978,4.17c0.053,0.11,0.158,0.187,0.282,0.203l4.578,0.598L13.481,11.723z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="share_icon">
+            <path d="M16.76,7.51l-5.199-5.196c-0.234-0.239-0.633-0.066-0.633,0.261v2.534c-0.267-0.035-0.575-0.063-0.881-0.063c-3.813,0-6.915,3.042-6.915,6.783c0,2.516,1.394,4.729,3.729,5.924c0.367,0.189,0.71-0.266,0.451-0.572c-0.678-0.793-1.008-1.645-1.008-2.602c0-2.348,1.93-4.258,4.303-4.258c0.108,0,0.215,0.003,0.321,0.011v2.634c0,0.326,0.398,0.5,0.633,0.262l5.199-5.193C16.906,7.891,16.906,7.652,16.76,7.51 M11.672,12.068V9.995c0-0.185-0.137-0.341-0.318-0.367c-0.219-0.032-0.49-0.05-0.747-0.05c-2.78,0-5.046,2.241-5.046,5c0,0.557,0.099,1.092,0.292,1.602c-1.261-1.111-1.979-2.656-1.979-4.352c0-3.331,2.77-6.041,6.172-6.041c0.438,0,0.886,0.067,1.184,0.123c0.231,0.043,0.441-0.134,0.441-0.366V3.472l4.301,4.3L11.672,12.068z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="comments_icon">
+            <path d="M14.999,8.543c0,0.229-0.188,0.417-0.416,0.417H5.417C5.187,8.959,5,8.772,5,8.543s0.188-0.417,0.417-0.417h9.167C14.812,8.126,14.999,8.314,14.999,8.543 M12.037,10.213H5.417C5.187,10.213,5,10.4,5,10.63c0,0.229,0.188,0.416,0.417,0.416h6.621c0.229,0,0.416-0.188,0.416-0.416C12.453,10.4,12.266,10.213,12.037,10.213 M14.583,6.046H5.417C5.187,6.046,5,6.233,5,6.463c0,0.229,0.188,0.417,0.417,0.417h9.167c0.229,0,0.416-0.188,0.416-0.417C14.999,6.233,14.812,6.046,14.583,6.046 M17.916,3.542v10c0,0.229-0.188,0.417-0.417,0.417H9.373l-2.829,2.796c-0.117,0.116-0.71,0.297-0.71-0.296v-2.5H2.5c-0.229,0-0.417-0.188-0.417-0.417v-10c0-0.229,0.188-0.417,0.417-0.417h15C17.729,3.126,17.916,3.313,17.916,3.542 M17.083,3.959H2.917v9.167H6.25c0.229,0,0.417,0.187,0.417,0.416v1.919l2.242-2.215c0.079-0.077,0.184-0.12,0.294-0.12h7.881V3.959z"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="support_icon">
+            <path d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61"></path>
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="operation_icon">
+            <path d="M3.936,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021S5.957,11.116,5.957,10
+								S5.052,7.979,3.936,7.979z M3.936,11.011c-0.558,0-1.011-0.452-1.011-1.011s0.453-1.011,1.011-1.011S4.946,9.441,4.946,10
+								S4.494,11.011,3.936,11.011z M16.064,7.979c-1.116,0-2.021,0.905-2.021,2.021s0.905,2.021,2.021,2.021s2.021-0.905,2.021-2.021
+								S17.181,7.979,16.064,7.979z M16.064,11.011c-0.559,0-1.011-0.452-1.011-1.011s0.452-1.011,1.011-1.011S17.075,9.441,17.075,10
+								S16.623,11.011,16.064,11.011z M10,7.979c-1.116,0-2.021,0.905-2.021,2.021S8.884,12.021,10,12.021s2.021-0.905,2.021-2.021
+								S11.116,7.979,10,7.979z M10,11.011c-0.558,0-1.011-0.452-1.011-1.011S9.442,8.989,10,8.989S11.011,9.441,11.011,10
+								S10.558,11.011,10,11.011z"></path>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="link_icon">
+        <path d="M4.5,16c-1.2,0-2.3-0.5-3.2-1.3c-1.8-1.8-1.8-4.6,0-6.4L2,7.6L3.4,9L2.7,9.7 c-1,1-1,2.6,0,3.6c1,1,2.6,1,3.6,0l3-3c1-1,1-2.6,0-3.6L8.6,6L10,4.6l0.7,0.7c1.8,1.8,1.8,4.6,0,6.4l-3,3C6.9,15.5,5.7,16,4.5,16z"></path> <path d="M6,11.4l-0.7-0.7c-1.8-1.8-1.8-4.6,0-6.4l3-3c0.9-0.9,2-1.3,3.2-1.3s2.3,0.5,3.2,1.3c1.8,1.8,1.8,4.6,0,6.4 L14,8.4L12.6,7l0.7-0.7c1-1,1-2.6,0-3.6c-1-1-2.6-1-3.6,0l-3,3c-1,1-1,2.6,0,3.6L7.4,10L6,11.4z"></path>
+    </symbol>
+    <symbol id="picture_icon" viewBox="0 0 1024 1024">
+        <path class="path1" d="M947.2 1024h-870.4c-42.347 0-76.8-34.451-76.8-76.8v-870.4c0-42.347 34.453-76.8 76.8-76.8h870.4c42.349 0 76.8 34.453 76.8 76.8v870.4c0 42.349-34.451 76.8-76.8 76.8zM76.8 51.2c-14.115 0-25.6 11.485-25.6 25.6v870.4c0 14.115 11.485 25.6 25.6 25.6h870.4c14.115 0 25.6-11.485 25.6-25.6v-870.4c0-14.115-11.485-25.6-25.6-25.6h-870.4z"></path><path class="path2" d="M665.6 460.8c-56.464 0-102.4-45.936-102.4-102.4s45.936-102.4 102.4-102.4 102.4 45.936 102.4 102.4-45.936 102.4-102.4 102.4zM665.6 307.2c-28.232 0-51.2 22.968-51.2 51.2s22.968 51.2 51.2 51.2 51.2-22.968 51.2-51.2-22.968-51.2-51.2-51.2z"></path><path class="path3" d="M896 102.4h-768c-14.138 0-25.6 11.462-25.6 25.6v614.4c0 14.139 11.462 25.6 25.6 25.6h768c14.139 0 25.6-11.461 25.6-25.6v-614.4c0-14.138-11.461-25.6-25.6-25.6zM153.6 598.533l164.318-184.858c4.203-4.728 9.694-7.371 15.462-7.44 5.725-0.090 11.322 2.438 15.638 7.062l283.27 303.502h-478.69v-118.267zM870.4 716.8h-168.075l-315.875-338.437c-14.269-15.288-33.312-23.605-53.691-23.325-20.354 0.246-39.214 8.992-53.107 24.621l-126.051 141.808v-367.867h716.8v563.2z"></path>
+    </symbol>
+    <symbol viewBox="0 0 1024 1024" id="meme">
+        <path class="path1" d="M486.4 1024c-129.922 0-252.067-50.594-343.936-142.464s-142.464-214.014-142.464-343.936c0-129.923 50.595-252.067 142.464-343.936s214.013-142.464 343.936-142.464c129.922 0 252.067 50.595 343.936 142.464s142.464 214.014 142.464 343.936-50.594 252.067-142.464 343.936c-91.869 91.87-214.014 142.464-343.936 142.464zM486.4 102.4c-239.97 0-435.2 195.23-435.2 435.2s195.23 435.2 435.2 435.2 435.2-195.23 435.2-435.2-195.23-435.2-435.2-435.2z"></path><path class="path2" d="M691.2 665.6h-409.6c-14.138 0-25.6-11.461-25.6-25.6s11.462-25.6 25.6-25.6h409.6c14.139 0 25.6 11.461 25.6 25.6s-11.461 25.6-25.6 25.6z"></path><path class="path3" d="M640 409.6c-42.349 0-76.8-34.453-76.8-76.8s34.451-76.8 76.8-76.8 76.8 34.453 76.8 76.8-34.451 76.8-76.8 76.8zM640 307.2c-14.115 0-25.6 11.485-25.6 25.6s11.485 25.6 25.6 25.6 25.6-11.485 25.6-25.6-11.485-25.6-25.6-25.6z"></path><path class="path4" d="M332.8 409.6c-42.347 0-76.8-34.453-76.8-76.8s34.453-76.8 76.8-76.8 76.8 34.453 76.8 76.8-34.453 76.8-76.8 76.8zM332.8 307.2c-14.115 0-25.6 11.485-25.6 25.6s11.485 25.6 25.6 25.6 25.6-11.485 25.6-25.6-11.485-25.6-25.6-25.6z"></path>
+    </symbol>
+    <symbol id="bar_link" viewBox="0 0 1024 1024">
+        <path class="path1" d="M546.917 665.512c-48.275 0-96.55-18.376-133.301-55.128-9.998-9.997-9.998-26.206 0-36.203s26.205-9.997 36.203 0c53.539 53.541 140.656 53.541 194.197 0l186.166-186.166c53.539-53.539 53.539-140.656 0-194.197-53.541-53.539-140.656-53.538-194.197 0l-157.082 157.083c-9.998 9.997-26.206 9.997-36.203 0-9.998-9.998-9.998-26.206 0-36.205l157.083-157.083c73.502-73.501 193.101-73.501 266.603 0s73.502 193.101 0 266.603l-186.168 186.168c-36.752 36.752-85.027 55.128-133.302 55.128z"></path><path class="path2" d="M239.717 972.712c-48.275 0-96.55-18.376-133.302-55.128-73.501-73.502-73.501-193.101 0-266.603l186.166-186.166c73.501-73.501 193.101-73.501 266.603 0 9.998 9.998 9.998 26.206 0 36.203-9.997 9.998-26.206 9.998-36.203 0-53.541-53.541-140.656-53.541-194.197 0l-186.165 186.166c-53.539 53.541-53.539 140.656 0 194.197s140.656 53.541 194.195 0l157.083-157.083c9.997-9.997 26.206-9.997 36.203 0 9.998 9.997 9.998 26.206 0 36.203l-157.083 157.083c-36.75 36.752-85.026 55.128-133.301 55.128z"></path>
+    </symbol>
+</svg>
+
+<!--头部-->
+<div class="header">
+    <div class="header_container">
+        <!--logo-->
+        <div class="logo">
+            <a href="home_page.php">
+                <span>SL</span>
+            </a>
+        </div>
+        <!--搜索-->
+        <div class="search_box">
+            <form action="" id="search_form">
+                <input type="text" class="enter_search" id="search" name="search_content">
+                <button type="button" id="search_start">
+                    <svg style="height: 20px;width: 20px;">
+                        <use xlink:href="#zoom_icon"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <!--导航-->
+        <div class="nav">
+            <div class="navbar">
+                <ul>
+                    <li class="nav_user"><a href="user_page.php">
+                        <i>
+                            <svg>
+                                <use xlink:href="#user_icon"></use>
+                            </svg>
+
+                        </i>
+                        <span class="user"></span></a></li>
+                    <li class="nav_home"><a href="home_page.php">
+                        <i class="home_icon">
+                            <svg>
+                                <use xlink:href="#home_icon"></use>
+                            </svg>
+                        </i>
+                        <span>首页</span></a></li>
+                    <li class="nav_friend"><a href="search_page.php?key_words=">
+                        <i>
+                           <svg>
+                               <use xlink:href="#friend_icon"></use>
+                           </svg>
+                        </i>
+                        <span>添加好友</span></a></li>
+
+                </ul>
+            </div>
+            <div class="shortcut">
+                <span id="header_chat">
+                    <i>
+                        <svg>
+                            <use xlink:href="#chat_icon"></use>
+                        </svg>
+                    </i>
+                    <em></em>
+                </span>
+                <div id="chat_list">
+                    <i></i>
+                    <div class="chat_list_header">
+                        <span id="to_chat_new">好友会话</span>
+                        <span id="to_chat_unknown">陌生人</span>
+                    </div>
+                    <div class="chat_list_content">
+
+                    </div>
+                    <div class="chat_list_footer">
+                        <span id="to_chat_all">查看所有消息</span>
+                        <span id="mark_read">全部标记为已读</span>
+                    </div>
+                </div>
+                <span id="header_message">
+                    <i>
+                        <svg>
+                            <use xlink:href="#message_icon"></use>
+                        </svg>
+                    </i>
+                    <em></em>
+                </span>
+                <div id="message_list">
+                    <i></i>
+                    <div class="message_list_header">
+                        <span>消息公告</span>
+                    </div>
+                    <div class="message_list_content">
+
+                    </div>
+                </div>
+                <span id="header_more">
+                    <i>
+                        <svg>
+                            <use xlink:href="#more_icon"></use>
+                        </svg>
+                    </i>
+                </span>
+                <div id="more_list">
+                    <i></i>
+                    <ul>
+                        <li><a href="">设置</a></li>
+                        <li><a href="">获取帮助</a></li>
+                        <li><a href="php/logout.php">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="main">
+    <div class="main_container">
+        <!--主栏-->
+        <div class="content_main">
+            <!--筛选区-->
+            <div class="filter">
+                <ul class="filter_list">
+                    <li class="filter_item">
+                        <a href="home_page.php">首页</a>
+                    </li>
+                    <li class="filter_item">
+                        <a href="user_page.php">用户</a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li class="filter_item">
+                        <a href="hot_weibo.html">热点微博</a>
+                    </li>
+                    <li class="filter_item">
+                        <a href="fans.html">我的关注</a>
+                    </li>
+                    <li class="filter_item">
+                        <a href="user_fav.php">我的收藏</a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+            <!--内容视图-->
+            <div class="content_view">
+                <!--编辑器-->
+                <div class="main_editor">
+                    <div class="editor_header">
+                        <div class="editor_tab_1">
+                            <i>
+                                <svg>
+                                    <use xlink:href="#edit_icon"></use>
+                                </svg>
+                            </i>
+                            <span>发帖</span>
+                            <em></em>
+                        </div>
+                    </div>
+                    <div class="editor_content">
+                        <div id="main_editor_user">
+                            <a href="javascript:void(0);"><img src="" alt=""></a>
+                        </div>
+                        <div contenteditable="true" id="main_editor">
+
+                        </div>
+                    </div>
+
+                    <div class="editor_bar">
+                        <ul>
+                            <li class="add_meme" title="添加表情">
+                                <svg>
+                                    <use xlink:href="#meme"></use>
+                                </svg>
+                            </li>
+                            <li id="add_img" title="添加图片">
+                                <svg>
+                                    <use xlink:href="#picture_icon"></use>
+                                </svg>
+                            </li>
+                            <li id="add_link" title="添加链接">
+                                <svg>
+                                    <use xlink:href="#bar_link"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <button type="submit" id="fabu">发布</button>
+
+                    </div>
+                </div>
+                <!--微博内容条目-->
+                <div class="content_list" data-num="0">
+                </div>
+                <!--底部提示信息-->
+                <div class="content_footer">
+                    <img src="img/weibo_loading.gif" alt="">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--右侧栏-->
+        <div class="side">
+            <!--用户信息统计-->
+            <div class="user_total">
+                <div class="side_user">
+                    <span>
+                        <a href="user_page.php">
+                            <img src="" alt="">
+                        </a>
+                    </span>
+                    <a href="user_page.php" class="user"></a>
+                </div>
+                <div class="total">
+                    <ul>
+                        <li id="total_guanzhu">
+                            <a href="fans.html">0</a>
+                            <span>关注</span>
+                        </li>
+                        <li id="total_fensi">
+                            <a href="fans.html">0</a>
+                            <span>粉丝</span>
+                        </li>
+                        <li id="total_weibo">
+                            <a href="user_page.php">0</a>
+                            <span>微博</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--推荐主页-->
+            <div class="recommend">
+                <p>主页推荐</p>
+                <div class="recommend_tab" data-tab="1" style="display: block">
+                    <div class="recommend_img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="recommend_detail">
+                        <div class="recommend_user">
+                            <span><a class="icon_link" href=""><img class="" src="" alt=""></a></span>
+                            <div class="">
+                                <a href="" class="user user_name"></a>
+                                <p>粉丝：<span class="fans_num"></span></p>
+                            </div>
+                        </div>
+                        <div class="recommend_sub">
+                            <button class="follow">+关注</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend_tab" data-tab="2">
+                    <div class="recommend_img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="recommend_detail">
+                        <div class="recommend_user">
+                            <span><a class="icon_link" href=""><img class="" src="" alt=""></a></span>
+                            <div class="">
+                                <a href="" class="user user_name"></a>
+                                <p>粉丝：<span class="fans_num"></span></p>
+                            </div>
+                        </div>
+                        <div class="recommend_sub">
+                            <button class="follow">+关注</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend_tab" data-tab="3">
+                    <div class="recommend_img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="recommend_detail">
+                        <div class="recommend_user">
+                            <span><a class="icon_link" href=""><img class="" src="" alt=""></a></span>
+                            <div class="">
+                                <a href="" class="user user_name"></a>
+                                <p>粉丝：<span class="fans_num"></span></p>
+                            </div>
+                        </div>
+                        <div class="recommend_sub">
+                            <button class="follow">+关注</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend_tab" data-tab="4">
+                    <div class="recommend_img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="recommend_detail">
+                        <div class="recommend_user">
+                            <span><a class="icon_link" href=""><img class="" src="" alt=""></a></span>
+                            <div class="">
+                                <a href="" class="user user_name"></a>
+                                <p>粉丝：<span class="fans_num"></span></p>
+                            </div>
+                        </div>
+                        <div class="recommend_sub">
+                            <button class="follow">+关注</button>
+                        </div>
+                    </div>
+                </div>
+
+                <span id="recommend_tab_left">&lsaquo;</span>
+                <span id="recommend_tab_right">&rsaquo;</span>
+            </div>
+            <!--页脚-->
+            <div class="footer">
+                <ul>
+                    <li><a href="">隐私权政策</a></li>
+                    <li><a href="">意见反馈</a></li>
+                    <li><a href="">举报</a></li>
+                    <li><a href="">cookie</a></li>
+                    <li><a href="">更多</a></li>
+                </ul>
+                <p>SimpleLife&copy;2017</p>
+            </div>
+        </div>
+        <!--返回顶部-->
+        <div class="to_top">
+
+        </div>
+    </div>
+</div>
+<!--添加链接-->
+<div class="add_link_box">
+    <div class="box_header">
+        <p>添加链接</p>
+        <span>关闭</span>
+    </div>
+    <div class="box_content">
+        <label for="link_name">名称：</label>
+        <input type="text" id="link_name" name="link_name"><br>
+        <label for="link">地址：</label>
+        <input type="text" id="link" name="link">
+        <div class="link_error">链接名称不能为空！</div>
+    </div>
+    <div class="box_footer">
+        <button>确认</button>
+    </div>
+</div>
+
+<!--添加图片-->
+
+<form action="" enctype="multipart/form-data" id="upload_img" style="display: none">
+    <input type="file" accept="image/jpeg" name="user_img" id="img_file">
+    <input type="hidden" name="target" value="weibo">
+</form>
+
+<!--添加表情-->
+<div id="add_meme_box">
+    <div class="box_header">
+        <p>表情</p>
+        <span>关闭</span>
+    </div>
+    <div class="box_content">
+        <ul>
+        </ul>
+    </div>
+    <div class="box_footer">
+
+    </div>
+</div>
+
+<!--用户名片-->
+<div class="user_card">
+    <div class="card_cover">
+        <img src="resource/default/cover.jpg" alt="">
+        <div class="card_name">
+            <div class="card_user_img">
+                <a href="">
+                    <img src="resource/default/icon.jpg" alt="">
+                </a>
+            </div>
+            <div class="card_user_name">
+                <a href="">用户</a>
+            </div>
+        </div>
+    </div>
+    <div class="card_info">
+        <ul>
+            <li id="card_follow">关注<a href="">0</a></li><li id="card_fans">粉丝<a href="">0</a></li><li id="card_weibo">微博<a href="">0</a></li>
+        </ul>
+        <div class="operation_btn">
+            <button class="follow" id="card_follow_btn">+关注</button>
+        </div>
+    </div>
+    <span class="arrow_down"></span>
+    <span class="arrow_up"></span>
+</div>
+
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/home_page.js"></script>
+</body>
+</html>
